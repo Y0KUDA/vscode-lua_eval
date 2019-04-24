@@ -1,10 +1,10 @@
 import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
 
-	const lua = require('../node_modules/fengari/src/lua.js');
-	const lauxlib = require('../node_modules/fengari/src/lauxlib.js');
-	const lualib = require('../node_modules/fengari/src/lualib.js');
-	const { to_luastring } = require("../node_modules/fengari/src/fengaricore.js");
+	const lua = require('fengari/src/lua.js');
+	const lauxlib = require('fengari/src/lauxlib.js');
+	const lualib = require('fengari/src/lualib.js');
+	const { to_luastring } = require("fengari/src/fengaricore.js");
 
 	function eval_as_lua_code(code: string): string {
 		let L = lauxlib.luaL_newstate();
